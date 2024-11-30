@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+          <label for="title">Event Title:</label>
+          <input type="text" id="title" name="title" required>
+        </div>
+    
+        <div>
+          <label for="description">Event Description:</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+    
+        <div>
+          <label for="date">Event Date:</label>
+          <input type="text" id="date" name="date"required>
+        </div>
+        <div>
+            <label for="title">phonenumber</label>
+            <input type="number" id="title" name="phone_number" required>
+          </div>
+
+          <div>
+            <label for="description">Address:</label>
+            <textarea id="description" name="address" required></textarea>
+          </div>
+
+        <div>
+          <label for="location">Event Location:</label>
+          <input type="text" id="location" name="location"  required>
+        </div>
+    
+        <!-- <div>
+          <label for="attendee">Register as Attendee:</label>
+          <input type="checkbox" id="attendee" name="attendee" {% if user in event.attendees.all %}checked{% endif %}>
+          <span>If you want to attend this event, check this box.</span>
+        </div> -->
+    
+        <button type="submit">Submit</button>
+      </form>
+     
+</body>
+</html>
+
+
+
+
